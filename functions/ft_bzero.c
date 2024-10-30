@@ -6,7 +6,7 @@
 /*   By: pnovato- <pnovato-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 10:39:43 by pnovato-          #+#    #+#             */
-/*   Updated: 2024/10/30 15:11:39 by pnovato-         ###   ########.fr       */
+/*   Updated: 2024/10/30 15:36:01 by pnovato-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_bzero(void *s, size_t n)
 
 	i = 0;
 	ptr = (unsigned char *)s;
-	while (i <= n)
+	while (i < n)
 	{
 		ptr[i] = 0;
 		i++;

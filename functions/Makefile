@@ -6,7 +6,7 @@
 #    By: pnovato- <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/30 14:57:03 by pnovato-          #+#    #+#              #
-#    Updated: 2024/10/30 15:09:37 by pnovato-         ###   ########.fr        #
+#    Updated: 2024/10/30 16:00:09 by pnovato-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,8 @@ ft_strnstr.c \
 ft_isalpha.c \
 ft_memcmp.c \
 ft_strdup.c \
-ft_strrchr.c 
+ft_strrchr.c \
+ft_strlcpy.c
  
 OBJS = $(SRCS:.c=.o)
 
@@ -46,7 +47,7 @@ all:$(NAME)
 $(NAME):$(OBJS)
 	$(AR) $(NAME) $(OBJS)
 
-%.o:%.c
+%.o: %.c
 	$(CC) $(FLAGS) -c $< -o $@
 
 clean:
