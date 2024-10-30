@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pnovato- <pnovato-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/25 12:36:15 by pnovato-          #+#    #+#             */
-/*   Updated: 2024/10/25 12:36:15 by pnovato-         ###   ########.fr       */
+/*   Created: 2024/10/25 10:39:43 by pnovato-          #+#    #+#             */
+/*   Updated: 2024/10/30 15:11:39 by pnovato-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-void    *ft_memcpy(void *dest, const void *src, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-    const unsigned char  *ptr;
-    char  *ptr_dest;
-    size_t             i;
+	unsigned char	*ptr;
+	size_t			i;
 
-    ptr = (const unsigned char *)src;
-    ptr_dest = (char *)dest;
-    i = 0;
-    while(i < n)
-    {
-        ptr_dest[i] = ptr[i];
-        i++;
-    }
-    return (dest);
+	i = 0;
+	ptr = (unsigned char *)s;
+	while (i <= n)
+	{
+		ptr[i] = 0;
+		i++;
+	}
 }
