@@ -6,7 +6,7 @@
 /*   By: pnovato- <pnovato-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 14:09:34 by pnovato-          #+#    #+#             */
-/*   Updated: 2024/11/06 19:51:39 by pnovato-         ###   ########.fr       */
+/*   Updated: 2024/11/08 15:20:55 by pnovato-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,16 @@ unsigned int	cont_word(char const *s, char c)
 	unsigned int	i;
 	unsigned int	count_words;
 
+	count_words = 0;
 	i = 0;
 	while (s[i])
 	{
 		if((char)s[i] != c)
+		{
 			count_words++;
 			while (ft_isprint(s[i]) && (char)s[i] != c && s[i])
 				i++;
+		}
 		i++;
 	}
 	return (count_words);	
@@ -50,12 +53,19 @@ char	*modified_strdup(const char *str, char c)
 	return (str2);
 }
 
+void	ft_free(char **ptr)
+{
+	int i = 0;
+	while(ptr[i])
+		free(ptr[i++]);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	unsigned int	i;
 	unsigned int	j;
 	unsigned int	x;
-	char	**ptr;
+	char	**ptr = NULL;
 
 	j = 0;
 	i = cont_word(s,c);
@@ -68,6 +78,10 @@ char	**ft_split(char const *s, char c)
 		while ((char)s[j] == c && s[j])
 			j++;
 		ptr[x] = modified_strdup(&s[j], c);
+		if (!ptr[x])
+			return (ft_free(ptr), NULL);
+		while (s[j] && s[j] != c)
+			j++;
 		x++;
 	}
 	return (ptr);

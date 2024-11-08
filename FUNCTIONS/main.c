@@ -6,7 +6,7 @@
 /*   By: pnovato- <pnovato-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 11:07:24 by pnovato-          #+#    #+#             */
-/*   Updated: 2024/11/06 19:42:09 by pnovato-         ###   ########.fr       */
+/*   Updated: 2024/11/08 17:56:38 by pnovato-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,12 @@
 
 int	main()
 {
-	char	**ptr;
-	unsigned int	i = 0;
-	unsigned int	j = 0;
-	const char s[50] = "patric/k Ste fanie jorge mar cos";
-	/*const*/char b = ' ';
+	//int n = 345;
+	//char	**ptr = NULL;
+	//unsigned int	i = 0;
+	//unsigned int	j = 0;
+	//const char s[50] = "  patric/k Ste fanie jorge mar cos  ";
+	//char b = ' ';
 	//int a = 'e';
 	//size_t *a;
 
@@ -90,13 +91,17 @@ int	main()
 
 	//printf("%s\n",ft_strtrim(s,b));
 
-	ptr = ft_split(s,b);
-	while (ptr[i])
+	/* ptr = ft_split(s,b);
+	while (i < 6)
 	{
 		printf("%s",ptr[i]);
 		printf("\n");
 		i++;
 	}
+	for (i = 0; i < 6; i++)
+		free(ptr[i]);
+	free(ptr); */
 
+	//printf("%s\n", ft_itoa(n));
 }
 

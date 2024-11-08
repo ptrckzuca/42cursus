@@ -6,7 +6,7 @@
 #    By: pnovato- <pnovato-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/30 14:57:03 by pnovato-          #+#    #+#              #
-#    Updated: 2024/11/06 17:43:15 by pnovato-         ###   ########.fr        #
+#    Updated: 2024/11/08 18:11:55 by pnovato-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,7 +42,14 @@ ft_strlcpy.c \
 ft_substr.c \
 ft_strjoin.c \
 ft_strtrim.c \
-ft_split.c
+ft_split.c \
+ft_itoa.c \
+ft_strmapi.c \
+ft_striteri.c \
+ft_putchar_fd.c \
+ft_putstr_fd.c \
+ft_putendl_fd.c \
+ft_putnbr_fd.c
  
 OBJS = $(SRCS:.c=.o)
 
